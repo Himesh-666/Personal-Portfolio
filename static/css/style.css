@@ -1,0 +1,542 @@
+* {
+    transition: 0.2s ease;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+       background: #f8fafc;
+    color: #111827;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+h1 {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 22px;
+}
+
+p {
+    line-height: 1.7;
+}
+section {
+
+    margin-bottom: 60px;
+    margin-top: 80px;
+}
+section h1 {
+    text-align: center;
+   font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+section:hover {
+    transform: translateY(-3px);
+    transition: 0.3s;
+}
+
+
+.projects-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    border-radius: 16px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+}
+.project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.project-card:hover img {
+    transform: scale(1.05);
+}
+.buttons {
+    margin-top: 10px;
+}
+.buttons a {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 5px 10px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 0;
+    gap: 60px;
+    
+}
+
+.hero-left {
+    flex: 1;
+}
+
+.hero-left h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.hero-left h1 span {
+    color: #6366f1;
+}
+
+.hero-left h2 {
+    font-size: 20px;
+    color: #6b7280;
+    margin-top: 10px;
+}
+
+.hero-left p {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+.hero-buttons {
+    margin-top: 25px;
+}
+
+.hero-buttons a {
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-right: 10px;
+    font-weight: 500;
+}
+
+/* primary button */
+.hero-buttons a:first-child {
+    background: #111827;
+    color: white;
+}
+
+/* secondary button */
+.hero-buttons a:last-child {
+    background: #e5e7eb;
+    color: #111827;
+}
+.hero-right img {
+    width: 240px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.logo span {
+    color: #6366f1;
+}
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 16px 40px;
+
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.nav-links a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: #374151;
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #6366f1;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.active {
+    color: #111827;
+    font-weight: 600;
+}
+
+.skills {
+    padding: 50px;
+    text-align: center;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skill-card {
+    padding: 12px 20px;
+    border-radius: 30px;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    background: #6366f1;
+    color: white;
+}
+.skills-grid {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.skill-box {
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: #e5e7eb;
+    font-size: 14px;
+    color: #374151;
+}
+.about {
+    padding: 50px;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-image img {
+    width: 250px;
+    border-radius: 10px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.contact-form button {
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.success-msg {
+    color: green;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.blog-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 10px;
+}
+.blog-card a {
+    text-decoration: none;
+    color: black;
+}
+
+.blog-card a:hover {
+    color: gray;
+}
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+    margin-top: 40px;
+}.active {
+    color: gray;
+    font-weight: bold;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    flex: 1;
+}
+
+.card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.hero-buttons a,
+.nav-btn {
+    transition: all 0.3s ease;
+}
+
+.hero-buttons a:hover,
+.nav-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* Projects Grid Layout */
+/* LIST LAYOUT */
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+/* CARD */
+.project-card {
+    display: flex;
+    gap: 25px;
+    background: rgb(173, 189, 199);
+    padding: 20px;
+    border-radius: 14px;
+    border: 1px solid #e5ebe900;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+}
+
+/* IMAGE */
+.project-image img {
+    width: 220px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* CONTENT */
+.project-content {
+    flex: 1;
+}
+
+.project-content h2 {
+    margin-bottom: 8px;
+}
+
+.desc {
+    color: #4b5563;
+    margin-bottom: 10px;
+}
+
+.tech {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* BUTTONS */
+.buttons a {
+    display: inline-block;
+    padding: 8px 14px;
+    margin-right: 10px;
+    border-radius: 6px;
+    background: #111827;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.buttons a:hover {
+    background: #6366f1;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(99, 102, 241, 0.3);
+}
+.buttons a:last-child {
+    background: #e5e7eb;
+    color: #111827;
+}
+
+.footer {
+    margin-top: 80px;
+    padding: 30px 0;
+    text-align: center;
+    border-top: 1px solid #e5e7eb;
+    background: #ffffff;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/* ICONS */
+.social-icons a {
+    font-size: 20px;
+    margin: 0 10px;
+    color: #374151;
+    transition: 0.3s;
+}
+
+/* 🔥 HOVER EFFECT */
+.social-icons a:hover {
+    color: #6366f1;
+    transform: translateY(-2px);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .project-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .project-image img {
+        width: 100%;
+        height: auto;
+    } 
+}
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .hero-right img {
+        width: 180px;
+        height: 180px;
+        margin-top: 20px;
+    }
+}
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links a {
+        margin: 5px 10px;
+    }
+
+    .nav-actions {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-card {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .project-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .project-content {
+        max-width: 100%;
+    }
+}
+@media (max-width: 768px) {
+    section {
+        margin-top: 40px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .buttons a {
+        display: block;
+        margin-bottom: 8px;
+        text-align: center;
+    }
+}

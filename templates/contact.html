@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Contact Me</h1>
+
+{% if success %}
+    <p class="success-msg">Message sent successfully ✅</p>
+{% endif %}
+
+<form method="POST" class="contact-form">
+    {% csrf_token %}
+
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+
+    <button type="submit">Send</button>
+</form>
+
+{% endblock %}

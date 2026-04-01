@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section>
+    <h1>My Projects</h1>
+
+    <div class="projects-list">
+        {% for project in projects %}
+            <div class="project-card">
+
+                <div class="project-image">
+                    {% if project.image %}
+                        <img src="{{ project.image.url }}" alt="project image">
+                    {% endif %}
+                </div>
+
+                <div class="project-content">
+                    <h2>{{ project.title }}</h2>
+                    <p class="desc">{{ project.description }}</p>
+
+                    <p class="tech"><strong>Tech:</strong> {{ project.tech_stack }}</p>
+
+                    <div class="buttons">
+                        <a href="{{ project.github_link }}" target="_blank">GitHub</a>
+
+                        {% if project.live_link %}
+                            <a href="{{ project.live_link }}" target="_blank">Live</a>
+                        {% endif %}
+                    </div>
+                </div>
+
+            </div>
+        {% endfor %}
+    </div>
+
+</section>
+
+{% endblock %} 

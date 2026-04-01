@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="hero">
+
+    <div class="hero-left">
+        <h1>Hi, I'm <span>Himeshwar</span> 👋</h1>
+        <h2>Full Stack Developer</h2>
+
+        <p>
+            I build scalable web applications using Django and modern technologies.
+            Passionate about solving real-world problems.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="/projects/">View Projects</a>
+            <a href="/contact/">Contact Me</a>
+        </div>
+    </div>
+<div class="hero-right">
+    <img src="{% static 'images/profile.jpeg' %}" alt="profile">
+</div>
+
+</section>
+<section class="skills">
+
+    <h1>My Skills</h1>
+
+    <div class="skills-container">
+
+        {% for skill in skills %}
+            <div class="skill-card">{{ skill.name }}</div>
+        {% endfor %}
+
+    </div>
+
+</section>
+
+<section class="about">
+
+    <h1>About Me</h1>
+
+    <div class="about-container">
+
+        <div class="about-text">
+            <p>
+                I am a passionate Full Stack Developer with a strong interest in building
+                dynamic and scalable web applications. I enjoy solving real-world problems
+                and continuously improving my skills in modern technologies.
+            </p>
+
+            <p>
+                Currently, I am focusing on Django, backend development, and creating
+                projects that demonstrate practical knowledge and clean architecture.
+            </p>
+        </div>
+
+        <div class="about-image">
+            <img src="{% static 'images/profile.jpeg' %}" alt="about image">
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
